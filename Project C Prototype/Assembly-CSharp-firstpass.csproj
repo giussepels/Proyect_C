@@ -166,37 +166,37 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KdTreeLib">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
  </Reference>
  <Reference Include="pb_Stl">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
  </Reference>
  <Reference Include="Poly2Tri">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderEditor-Unity5">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/Tech/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/Tech/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/Tech/DOTween/DOTween43.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/Tech/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/Tech/DOTween/DOTween46.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/Tech/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/Tech/DOTween/DOTween50.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/Tech/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>C:/Users/Intel/Documents/repos/Unity/Project C Prototype/Assets/Tech/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>C:/Users/Intel/Documents/GameDev/ProjectC/Unity Project/Proyect_C/Project C Prototype/Assets/Tech/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Intel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
