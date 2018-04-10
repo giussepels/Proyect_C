@@ -1,0 +1,157 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG.Tweening;
+using UnityStandardAssets.Characters.FirstPerson;
+
+public class Player : MonoBehaviour {
+
+	public GameObject fadePurple;
+	public GameObject translocatorGUI;
+	public GameObject dialogBox;
+	public GameObject fadeToBlack;
+	public AudioClip translocateClip;
+	public AudioClip crescendoClip;
+	public AudioClip dropClip;
+	public AudioSource audioS;
+
+    /// <summary>
+    /// Spawning Translocator
+    /// </summary>
+    public GameObject translocationBallOject;
+    public Transform spawnpoint;
+    public float initialForce;
+    public float minimum;
+    public float maximum;
+    private float t;
+    private bool ballOut;
+
+    // Use this for initialization
+    void Start () {
+		GemuManager.gameEnd = false;
+		GetComponent<FirstPersonController>().m_WalkSpeed = 5;
+        ballOut = false;
+        initialForce = minimum;
+    }
+	
+	// Update is called once per frame
+	void Update () {
+
+        translocationBallOject.GetComponent<Rigidbody>().AddForce(transform.forward * initialForce * Time.deltaTime, ForceMode.Impulse);
+
+        if (GameObject.FindWithTag("TBall") != null){
+			translocatorGUI.SetActive(true);
+		} else{
+			translocatorGUI.SetActive(false);
+		}
+
+
+        if (Input.GetMouseButton(0))
+        {
+            initialForce = Mathf.Lerp(minimum, maximum, t);
+
+
+            t += 0.5f * Time.deltaTime;
+        }
+
+        if (Input.GetMouseButtonUp(0) && ballOut == false)
+        {
+            Instantiate(translocationBallOject, spawnpoint.position, Camera.main.transform.rotation);
+            ballOut =true;
+        }
+
+        if (Input.GetMouseButtonDown(1) && GameObject.FindWithTag("TBall") != null){
+			fadePurple.GetComponent<Animator>().SetTrigger("PurpleFade");
+			GameObject ballLocation = GameObject.FindWithTag("TBall");
+			transform.position = ballLocation.transform.position;
+			audioS.PlayOneShot(translocateClip);
+            ballOut = false ;
+            initialForce = minimum;
+			Destroy(GameObject.FindWithTag("TBall"));
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			SceneManager.LoadScene(0);
+			//Application.Quit();
+		}
+
+
+		if (transform.position.y < -12){
+			fadePurple.GetComponent<Animator>().SetTrigger("PurpleFade");
+			Destroy(GameObject.FindWithTag("TBall"));
+			transform.position = new Vector3 (-0.52f, 1.04f, -32.76f);
+		}
+	}
+
+  
+
+    void OnTriggerEnter(Collider col){
+		if (col.tag == "EndTrigger"){
+			GetComponent<FirstPersonController>().m_WalkSpeed = 0;
+			GetComponent<AudioSource>().volume = 0;
+			GemuManager.gameEnd = true;
+			GameObject musicManager;
+			musicManager = GameObject.Find("MusicManager");
+			musicManager.GetComponent<AudioSource>().volume = 0;
+			Invoke ("PlayCrescendo", 4.5f);
+			Invoke ("FadeToBlack", 10f);
+			Invoke ("ShowDialog4", 14f);
+			Invoke ("PlayBassDrop", 14f);
+			Invoke ("EndGame", 22f);
+		}
+
+		if (col.tag == "DialogTrigger1"){
+			ShowDialog1();
+			Destroy(col.gameObject);
+		}
+
+		if (col.tag == "DialogTrigger2"){
+			ShowDialog2();
+			Destroy(col.gameObject);
+		}
+
+		if (col.tag == "DialogTrigger3"){
+			ShowDialog3();
+			Destroy(col.gameObject);
+		}
+
+	}
+
+	void PlayCrescendo(){
+		audioS.PlayOneShot(crescendoClip);
+	}
+
+	void PlayBassDrop(){
+		audioS.PlayOneShot(dropClip);
+	}
+
+	void ShowDialog1(){
+		dialogBox.GetComponent<Text>().text = "You believe yourselves a superior race because you can manipulate everything that you create...";
+		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
+	}
+
+	void ShowDialog2(){
+		dialogBox.GetComponent<Text>().text = "Always trying to find a solution to your lives, always managing to survive...";
+		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
+	}
+
+	void ShowDialog3(){
+		dialogBox.GetComponent<Text>().text = "What happens if I told you that is so easy to manipulate all of your SENSES?";
+		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
+	}
+
+	void ShowDialog4(){
+		dialogBox.GetComponent<Text>().text = "What happens if I told you that everything you know, is just a LIE?...";
+		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
+	}
+
+	void FadeToBlack(){
+		fadeToBlack.SetActive(true);
+	}
+
+	void EndGame(){
+		SceneManager.LoadScene("MainMenu");
+	}
+}
