@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\FloorButton.cs" />
      <Compile Include="Assets\Scripts\GemuManager.cs" />
      <Compile Include="Assets\Scripts\InGameManager.cs" />
+     <Compile Include="Assets\Scripts\Level1Manager.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MenuBall.cs" />
      <Compile Include="Assets\Scripts\MovingPart.cs" />

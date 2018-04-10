@@ -88,6 +88,18 @@ public class Player : MonoBehaviour {
 			Destroy(col.gameObject);
 		}
 
+		if (col.name == "MusicDoorOut"){
+			GameObject musicManager = GameObject.Find("MusicManager");
+			GetComponent<AudioSource>().DOPitch(1f, 0.5f);
+			musicManager.GetComponent<AudioSource>().DOPitch(1f, 0.5f);
+		}
+
+		if (col.name == "MusicDoorIn"){
+			GameObject musicManager = GameObject.Find("MusicManager");
+			GetComponent<AudioSource>().DOPitch(0.2f, 0.5f);
+			musicManager.GetComponent<AudioSource>().DOPitch(0.2f, 0.5f);
+		}
+
 	}
 
 	void PlayCrescendo(){

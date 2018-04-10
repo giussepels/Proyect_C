@@ -508,7 +508,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TLS Prototype Ver. 0.02
+  m_Text: TLS Prototype Ver. 0.03
 --- !u!222 &792938318
 CanvasRenderer:
   m_ObjectHideFlags: 0
