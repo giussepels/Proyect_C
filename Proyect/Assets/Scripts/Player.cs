@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
     /// Spawning Translocator
     /// </summary>
     public GameObject translocationBallOject;
+    public GameObject SpawnBall;
     public Transform spawnpoint;
     public float initialForce;
     public float minimum;
@@ -34,12 +35,14 @@ public class Player : MonoBehaviour {
 		GetComponent<FirstPersonController>().m_WalkSpeed = 5;
         ballOut = false;
         initialForce = minimum;
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        translocationBallOject.GetComponent<Rigidbody>().AddForce(transform.forward * initialForce * Time.deltaTime, ForceMode.Impulse);
+        SpawnBall = GameObject.FindWithTag("TBall");
+
 
         if (GameObject.FindWithTag("TBall") != null){
 			translocatorGUI.SetActive(true);
@@ -48,7 +51,7 @@ public class Player : MonoBehaviour {
 		}
 
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0)) 
         {
             initialForce = Mathf.Lerp(minimum, maximum, t);
 
@@ -59,6 +62,7 @@ public class Player : MonoBehaviour {
         if (Input.GetMouseButtonUp(0) && ballOut == false)
         {
             Instantiate(translocationBallOject, spawnpoint.position, Camera.main.transform.rotation);
+            SpawnBall.GetComponent<Rigidbody>().AddForce(transform.forward * initialForce, ForceMode.Impulse);
             ballOut =true;
         }
 
