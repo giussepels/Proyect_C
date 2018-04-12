@@ -15,7 +15,7 @@ public class TranslocationSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0) && GameObject.FindWithTag("TBall") == null){
+		if (Input.GetMouseButtonDown(0) && GameObject.FindWithTag("TBall") == null && GemuManager.canShoot){
 			Instantiate(translocationBallOject, transform.position,  Camera.main.transform.rotation);
 		}
 	}

@@ -9,7 +9,7 @@ public class LaserScript : MonoBehaviour {
 
 	void Start ()
     {
-        activate = false;
+        activate = true;
         gameObject.GetComponent<Light>().enabled = false;
         laser = gameObject.GetComponent<LineRenderer>();
         laser.enabled = false;
@@ -45,7 +45,11 @@ public class LaserScript : MonoBehaviour {
                 laser.SetPosition(1, hit.point);
                 if (hit.rigidbody)
                 {
-                    Destroy(hit.transform.gameObject);
+                    if (hit.transform.tag == "Player"){
+                        hit.transform.gameObject.GetComponent<Player>().Respawn();
+                    } else if(hit.transform.tag == "TBall"){
+                        Destroy(hit.transform.gameObject);
+                    }
                     // hit.rigidbody.AddForceAtPosition(transform.forward * 5, hit.point); Si quieres que el laser empuje algo
                 }
             }

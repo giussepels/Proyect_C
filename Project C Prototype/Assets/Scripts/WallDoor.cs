@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class WallDoor : MonoBehaviour {
 
+	public float duration;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,12 +18,10 @@ public class WallDoor : MonoBehaviour {
 	}
 
 	public void OpenDoor(){
-		Debug.Log("Open Door");
-		transform.DORotateQuaternion(Quaternion.Euler(transform.rotation.x, 90, transform.rotation.z), 0.6f);
+		transform.DORotateQuaternion(Quaternion.Euler(transform.rotation.x, 90, transform.rotation.z), duration);
 	}
 
 	public void CloseDoor(){
-		Debug.Log("Close Door");
-		transform.DORotateQuaternion(Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z), 0.6f);
+		transform.DORotateQuaternion(Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z), duration);
 	}
 }

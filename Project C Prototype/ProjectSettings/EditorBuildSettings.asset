@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gemu.unity
     guid: c0f2aaf32712643458e2d769ecb533ab
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 761eac689f9cf874da41d78e8be55fe5

@@ -14,15 +14,15 @@ public class MovingPart : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GemuManager.gameEnd == true){
-			if (!isCeilling){
-			//transform.Translate (playerPos * speed);
-			transform.DOMove(playerPos, 20f);
-			Quaternion newQuat = Quaternion.Euler(Random.Range(0,360),Random.Range(0,360),Random.Range(0,360) );
-			transform.DORotateQuaternion(newQuat, 20f);
-			} else{
-				Destroy(this.gameObject);
-			}
-		}
+		// if (GemuManager.gameEnd == true){
+		// 	if (!isCeilling){
+		// 	//transform.Translate (playerPos * speed);
+		// 	transform.DOMove(playerPos, 20f);
+		// 	Quaternion newQuat = Quaternion.Euler(Random.Range(0,360),Random.Range(0,360),Random.Range(0,360) );
+		// 	transform.DORotateQuaternion(newQuat, 20f);
+		// 	} else{
+		// 		Destroy(this.gameObject);
+		// 	}
+		// }
 	}
 }

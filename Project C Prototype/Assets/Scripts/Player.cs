@@ -16,9 +16,15 @@ public class Player : MonoBehaviour {
 	public AudioClip crescendoClip;
 	public AudioClip dropClip;
 	public AudioSource audioS;
+	public GameObject levelContainer;
+	public GameObject endAnim;
+	private bool gameEnded;
+	private int checkpoint;
 
 	// Use this for initialization
 	void Start () {
+		checkpoint = 1;
+		gameEnded = false;
 		GemuManager.gameEnd = false;
 		GetComponent<FirstPersonController>().m_WalkSpeed = 5;
 	}
@@ -50,20 +56,22 @@ public class Player : MonoBehaviour {
 			//Application.Quit();
 		}
 
-		if (Input.GetKeyDown(KeyCode.O)){
-			transform.position = new Vector3(-16.96f, 31f, -133.94f);
+		if (Input.GetKeyDown(KeyCode.O)){ // DEBUG ONLY
+			transform.position = new Vector3(-111f, 33f, -252.4f);
 		}
 
 
 		if (transform.position.y < -12){
-			fadePurple.GetComponent<Animator>().SetTrigger("PurpleFade");
-			Destroy(GameObject.FindWithTag("TBall"));
-			transform.position = new Vector3 (-0.52f, 1.04f, -32.76f);
+			Respawn();
 		}
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (col.tag == "EndTrigger"){
+		if (col.tag == "EndTrigger" && gameEnded == false){
+			gameEnded = true;
+			GemuManager.canShoot = false;
+			Destroy(levelContainer.gameObject);
+			Debug.Log("DESTROY DESTROY");
 			GetComponent<FirstPersonController>().m_WalkSpeed = 0;
 			GetComponent<AudioSource>().volume = 0;
 			GemuManager.gameEnd = true;
@@ -72,12 +80,13 @@ public class Player : MonoBehaviour {
 			musicManager.GetComponent<AudioSource>().volume = 0;
 			Invoke ("PlayCrescendo", 4.5f);
 			Invoke ("FadeToBlack", 10f);
-			Invoke ("ShowDialog4", 14f);
+			Invoke ("ShowDialog5", 14f);
 			Invoke ("PlayBassDrop", 14f);
 			Invoke ("EndGame", 22f);
 		}
 
 		if (col.tag == "DialogTrigger1"){
+			checkpoint = 1;
 			ShowDialog1();
 			Destroy(col.gameObject);
 		}
@@ -88,7 +97,14 @@ public class Player : MonoBehaviour {
 		}
 
 		if (col.tag == "DialogTrigger3"){
+			checkpoint = 2;
 			ShowDialog3();
+			Destroy(col.gameObject);
+		}
+
+		if (col.tag == "EndGame"){
+			FadeToBlack();
+			Invoke("ToEndScene", 4f);
 			Destroy(col.gameObject);
 		}
 
@@ -104,10 +120,24 @@ public class Player : MonoBehaviour {
 			musicManager.GetComponent<AudioSource>().DOPitch(0.2f, 0.5f);
 		}
 
+
+	}
+
+	void OnTriggerStay (Collider col){
+		if (col.tag == "MovingPlat"){
+			transform.parent = col.transform;
+		}
+	}
+
+	void OnTriggerExit (Collider col){
+		if (col.tag == "MovingPlat"){
+			transform.parent = null;
+		}
 	}
 
 	void PlayCrescendo(){
 		audioS.PlayOneShot(crescendoClip);
+		endAnim.SetActive(true);
 	}
 
 	void PlayBassDrop(){
@@ -115,6 +145,7 @@ public class Player : MonoBehaviour {
 	}
 
 	void ShowDialog1(){
+		dialogBox.GetComponent<Text>().color = Color.white;
 		dialogBox.GetComponent<Text>().text = "You believe yourselves a superior race because you can manipulate everything that you create...";
 		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
 	}
@@ -134,11 +165,39 @@ public class Player : MonoBehaviour {
 		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
 	}
 
+	void ShowDialog5(){
+		dialogBox.GetComponent<Outline>().effectDistance = new Vector2(4f, -4f);
+		dialogBox.GetComponent<Text>().text = "Let me show you what is truly REAL.";
+		dialogBox.GetComponent<Animator>().SetTrigger("DialogShow");
+	}
+
+
 	void FadeToBlack(){
 		fadeToBlack.SetActive(true);
 	}
 
 	void EndGame(){
+		SceneManager.LoadScene("Level2");
+	}
+
+	public void Respawn(){
+		fadePurple.GetComponent<Animator>().SetTrigger("PurpleFade");
+		Destroy(GameObject.FindWithTag("TBall"));
+		audioS.PlayOneShot(translocateClip);
+		switch(checkpoint){
+			case 1:
+				transform.position = new Vector3 (-0.52f, 1.04f, -32.76f);
+			break;
+
+			case 2:
+				transform.position = new Vector3 (-73.88f, 33f, -134.3f);
+			break;
+		}
+		
+	}
+
+	void ToEndScene(){
+		Destroy(gameObject.transform.Find("MusicManager"));
 		SceneManager.LoadScene("MainMenu");
 	}
 }

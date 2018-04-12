@@ -11,6 +11,9 @@ TagManager:
   - DialogTrigger2
   - DialogTrigger3
   - DialogTrigger4
+  - MovingPlat
+  - DialogTrigger5
+  - EndGame
   layers:
   - Default
   - TransparentFX
