@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 222}
   m_MaxSize: {x: 4000, y: 4022}
   vertical: 0
-  controlID: 139
+  controlID: 44
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -113,7 +113,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &6
 MonoBehaviour:
@@ -499,23 +499,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 042b0000
     m_LastClickedID: 0
-    m_ExpandedIDs: c28aeaff9e8beaff2e8eeaff388eeaff5eddeafff04eebff1864ebffe205f2ff2406f2ff6c13f2ff6a2cf2ffcc3af2ff16e9f2ffbaf1f2ffcaf3f2ff7a19f3ff203bf3ffbcf9fffffef9ffff9efbfffff4ffffff00000000aa3600006a9301007c580200
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: InstructionsText
-      m_OriginalName: InstructionsText
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 103570
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.011185985, y: -0.9768516, z: 0.20700215, w: -0.05278216}
     speed: 2
-    m_Value: {x: -0.011185985, y: -0.9768516, z: 0.20700215, w: -0.05278216}
+    m_Value: {x: 0.011185986, y: 0.9768516, z: -0.20700215, w: 0.052782163}
   m_Size:
     m_Target: 781.81744
     speed: 2
@@ -750,20 +750,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Textures
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Textures
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Intel\Documents\GameDev\ProjectC\Unity Project\Proyect_C\Project
     C Prototype
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 427}
-    m_SelectedIDs: 922c0000
-    m_LastClickedID: 11410
-    m_ExpandedIDs: 0000000000290000742a0000b42a0000f02a0000442b0000842b00005a2c0000842c0000922c0000ae2d00001ace000024ce000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 02290000
+    m_LastClickedID: 10498
+    m_ExpandedIDs: 0000000002290000042a0000822a0000c62a0000042b0000582b0000982b0000702c00009a2c0000aa2c00009a2d0000ce2d00000a2e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,7 +791,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000000290000742a0000b42a0000f02a0000842b0000842c0000ae2d0000
+    m_ExpandedIDs: 0000000002290000042a0000822a0000c62a0000042b0000582b0000982b0000702c00009a2c0000aa2c00009a2d0000ce2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
