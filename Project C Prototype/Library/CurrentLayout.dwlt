@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 222}
   m_MaxSize: {x: 4000, y: 4022}
   vertical: 0
-  controlID: 15
+  controlID: 102
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,10 +176,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 93
+  controlID: 15
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 94
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 95
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -328,8 +328,8 @@ MonoBehaviour:
     y: 0
     width: 479
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 27}
   m_Panes:
   - {fileID: 27}
@@ -392,7 +392,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   dragSelectMode: 2
   drawNormals: 0
-  selection: []
+  selection:
+  - {fileID: 0}
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -498,10 +499,10 @@ MonoBehaviour:
     height: 655
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7427ffff
-    m_LastClickedID: -55436
-    m_ExpandedIDs: 1853ffffc4ecffffdaf5ffff00000000
+    scrollPos: {x: 0, y: 1810}
+    m_SelectedIDs: 464cfdff
+    m_LastClickedID: -177082
+    m_ExpandedIDs: 9efbffff00000000b02f000022370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -552,14 +553,14 @@ MonoBehaviour:
     height: 655
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1478.4603008451688
+  lastFramingTime: 418.1769341986882
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.1439066, y: 0.043112755, z: -5.9406204}
+    m_Target: {x: 19.698833, y: -9.847078, z: -135.63687}
     speed: 2
-    m_Value: {x: -2.1439066, y: 0.043112755, z: -5.9406204}
+    m_Value: {x: 19.698833, y: -9.847078, z: -135.63687}
   m_RenderMode: 2
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -583,13 +584,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.075535275, y: -0.5644692, z: 0.051975857, w: 0.82034594}
+    m_Target: {x: -0.16983902, y: -0.7334893, z: 0.19852687, w: -0.62748337}
     speed: 2
-    m_Value: {x: 0.075535275, y: -0.5644692, z: 0.051975857, w: 0.82034594}
+    m_Value: {x: -0.16983902, y: -0.7334893, z: 0.19852687, w: -0.62748337}
   m_Size:
-    m_Target: 12.515577
+    m_Target: 57.216156
     speed: 2
-    m_Value: 12.515577
+    m_Value: 57.216156
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -750,20 +751,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Intel\Documents\GameDev\ProjectC\Unity Project\Proyect_C\Project
     C Prototype
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 359}
-    m_SelectedIDs: 5c2e0000
-    m_LastClickedID: 11868
-    m_ExpandedIDs: 00000000202b0000202c00009e2c0000e22c0000202d0000742d0000b42d00008a2e0000b22e0000c22e0000b22f0000e22f00001e30000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 115}
+    m_SelectedIDs: 9e290000
+    m_LastClickedID: 10654
+    m_ExpandedIDs: 00000000122900003c2a0000ba2a0000042b0000422b0000dc2b0000b42c0000de2c0000ee2c0000e82d00001c2e0000582e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,7 +792,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000202b0000202c00009e2c0000e22c0000202d0000742d0000b42d00008a2e0000b22e0000c22e0000b22f0000e22f00001e300000
+    m_ExpandedIDs: 00000000122900003c2a0000ba2a0000042b0000422b0000982b0000dc2b0000b42c0000de2c0000ee2c0000e82d00001c2e0000582e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
