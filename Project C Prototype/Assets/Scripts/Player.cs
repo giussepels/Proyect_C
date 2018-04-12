@@ -50,6 +50,10 @@ public class Player : MonoBehaviour {
 			//Application.Quit();
 		}
 
+		if (Input.GetKeyDown(KeyCode.O)){
+			transform.position = new Vector3(-16.96f, 31f, -133.94f);
+		}
+
 
 		if (transform.position.y < -12){
 			fadePurple.GetComponent<Animator>().SetTrigger("PurpleFade");
