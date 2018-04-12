@@ -14,7 +14,7 @@ public class GreenButton : MonoBehaviour {
         {
             foreach (GameObject obj in PlatformPieces)
             {
-                obj.active = false;
+                obj.SetActive(false);
             }
         }
     }
@@ -25,7 +25,7 @@ public class GreenButton : MonoBehaviour {
         {
             foreach (GameObject obj in PlatformPieces)
             {
-                obj.active = true;
+                obj.SetActive(true);
             }
         }
 
